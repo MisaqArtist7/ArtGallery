@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import SearchIcon from '@/components/icons/SearchIcon'    
 import LenzIcon from '@/components/icons/LenzIcon'
 import UserIcon from '@/components/icons/UserIcon'
@@ -10,10 +11,10 @@ import './header.css'
 export default function Header() {
   return (
     <header className='bg-white shadow'>
-      <div className='header__wrapper px-7 py-4'>
+      <div className='header__wrapper px-11 py-4 flex flex-col gap-y-4'>
         <div className='flex items-center justify-between gap-7'>
 
-          <div className='flex items-center gap-x-5 w-full'>
+          <div className='flex items-center gap-x-7 w-full'>
             <div>
               <Image src="./images/logo.svg" alt="Description" width={133} height={133} />
             </div>
@@ -31,7 +32,7 @@ export default function Header() {
           </div>
 
 
-          <div className='flex items-center gap-x-6'>
+          <div className='flex items-center gap-x-4'>
             <span><UserIcon /></span>
             <span><WishListIcon /></span>
             <span><GiftCart /></span>
@@ -46,7 +47,37 @@ export default function Header() {
 
         </div>
 
-        <div></div>
+        <div className='border-t border-t-gray-200'>
+          <nav className='flex-row-center pt-3'>
+            <ul className='flex items-center gap-x-3 text-gray-700'>
+              <li>
+                <Link href="" className='link'>Paintings</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Prints</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Photography</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Sculpture</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Artists</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Inspiration</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Exhibitions</Link>
+              </li>
+              <li>
+                <Link href="" className='link'>Art Advisory</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
       </div>
     </header>
   )
