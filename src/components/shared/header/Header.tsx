@@ -51,7 +51,10 @@ export default function Header() {
           <nav className='flex-row-center pt-3'>
             <ul className='flex items-center gap-x-3 text-gray-700'>
               <li>
-                <Link href="" className='link'>Paintings</Link>
+                <Link href="./" className='link'>Home</Link>
+              </li>
+              <li>
+                <Link href="painting" className='link'>Paintings</Link>
               </li>
               <li>
                 <Link href="" className='link'>Prints</Link>
