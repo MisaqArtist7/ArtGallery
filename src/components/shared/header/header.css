@@ -1,3 +1,7 @@
 .link:hover{
-  color: black;
+  color: #0500E8;
+}
+
+.active{
+  color: #0500E8;
 }

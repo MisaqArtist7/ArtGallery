@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import NavLink from './NavLink'
 import SearchIcon from '@/components/icons/SearchIcon'    
 import LenzIcon from '@/components/icons/LenzIcon'
 import UserIcon from '@/components/icons/UserIcon'
@@ -31,7 +31,6 @@ export default function Header() {
             </div>
           </div>
 
-
           <div className='flex items-center gap-x-4'>
             <span><UserIcon /></span>
             <span><WishListIcon /></span>
@@ -44,38 +43,38 @@ export default function Header() {
               <span>€ (EUR)</span>
             </div>
           </div>
-
+          
         </div>
 
         <div className='border-t border-t-gray-200'>
           <nav className='flex-row-center pt-3'>
-            <ul className='flex items-center gap-x-3 text-gray-700'>
+            <ul className='flex items-center gap-x-5 text-gray-700'>
               <li>
-                <Link href="./" className='link'>Home</Link>
+                <NavLink href="/">Home</NavLink>
               </li>
               <li>
-                <Link href="painting" className='link'>Paintings</Link>
+                <NavLink href="/paintings">Paintings</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Prints</Link>
+                <NavLink href="/prints">Prints</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Photography</Link>
+                <NavLink href="/photography">Photography</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Sculpture</Link>
+                <NavLink href="/sculpture">Sculpture</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Artists</Link>
+                <NavLink href="/artists">Artists</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Inspiration</Link>
+                <NavLink href="/inspiration">Inspiration</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Exhibitions</Link>
+                <NavLink href="/exhibitions">Exhibitions</NavLink>
               </li>
               <li>
-                <Link href="" className='link'>Art Advisory</Link>
+                <NavLink href="/art-advisory">Art Advisory</NavLink>
               </li>
             </ul>
           </nav>
