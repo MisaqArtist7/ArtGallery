@@ -20,6 +20,27 @@ body {
     @apply flex flex-col justify-center items-center;
   }
 
+  /* started swiper styles */
+  .swiper-pagination-bullet {
+    width: 32px !important;  
+    height: 5px !important;  
+    background-color: white !important;
+    opacity: 0.5 !important;
+    margin: 0 4px !important;
+    border-radius: 2px !important;  
+    transition: all 150ms ease-in-out;
+  }
+  .btn{
+    @apply bg-white hover:bg-black hover:text-white px-9 py-3 transition-colors ease-in-out duration-150;
+  }
+  .swiper-pagination-bullet:hover{
+    @apply !bg-white !opacity-100;
+  }
+  .swiper-pagination-bullet-active {
+    @apply !bg-white !opacity-100
+  }
+  /* finished swiper styles */
+
   .container {
     width: 100%;
     margin-left: auto;

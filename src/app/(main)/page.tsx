@@ -1,9 +1,14 @@
 import React from 'react'
+import Carousel from '@/components/shared/Carousel/Carousel'
+// import { Swiper, SwiperSlide } from 'swiper/react'
+// import "swiper/css";
+// import "swiper/css/effect-fade";
+// import { EffectFade, Navigation, Pagination } from "swiper";
 
 export default function page() {
   return (
-    <div className='flex-row-center font-semibold text-6xl mt-24'> 
-      <h1>Welcome to the Art Gallery</h1>
-    </div>
+    <section> 
+      <Carousel />
+    </section>
   )
 }
