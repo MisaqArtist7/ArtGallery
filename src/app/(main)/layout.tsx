@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import Header from "@/components/shared/header/Header";
+import Header from "@/components/shared/Header/Header";
 import '../../app/globals.css'
 // Head of website
 export const metadata = {
@@ -10,7 +9,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function mainLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Header/>
