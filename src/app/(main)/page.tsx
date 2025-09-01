@@ -26,9 +26,11 @@ export default function page() {
                     
                     <div className='flex items-center justify-between'>
                       <span className='text-gray-500 uppercase text-sm'>By Sophie Heatley | 06 Aug 2025</span>
-                      <svg className='w-6 h-6'>
-                        <use href="#share" />
-                      </svg>
+                      <a href="">
+                        <svg className='w-5 h-5'>
+                          <use href="#share" />
+                        </svg>
+                      </a>
                     </div>
 
                   </div>
@@ -45,7 +47,7 @@ export default function page() {
                     
                     <div className='flex items-center justify-between'>
                       <span className='text-gray-500 uppercase text-sm'>By Sophie Heatley | 06 Aug 2025</span>
-                      <svg className='w-6 h-6'>
+                      <svg className='w-5 h-5'>
                         <use href="#share" />
                       </svg>
                     </div>
@@ -64,7 +66,7 @@ export default function page() {
                     
                     <div className='flex items-center justify-between'>
                       <span className='text-gray-500 uppercase text-sm'>By Sophie Heatley | 06 Aug 2025</span>
-                      <svg className='w-6 h-6'>
+                      <svg className='w-5 h-5'>
                         <use href="#share" />
                       </svg>
                     </div>
@@ -83,7 +85,7 @@ export default function page() {
                     
                     <div className='flex items-center justify-between'>
                       <span className='text-gray-500 uppercase text-sm'>By Sophie Heatley | 06 Aug 2025</span>
-                      <svg className='w-6 h-6'>
+                      <svg className='w-5 h-5'>
                         <use href="#share" />
                       </svg>
                     </div>
@@ -91,18 +93,24 @@ export default function page() {
                   </div>
                 </div>
               </div>
-
+              <div className='py-6 flex-row-center'>
+                <a href="" className='uppercase btnSecoundary'>Show All</a>
+              </div>
             </div>
-            <div>
-
+            <div className='py-5 flex-row-center gap-3'>
+              <a href="" className='thirdBtn'>Artist Interviews</a>
+              <a href="" className='thirdBtn'>Art News</a>
+              <a href="" className='thirdBtn'>Art Exhibitions</a>
+              <a href="" className='thirdBtn'>Art Movements</a>
+              <a href="" className='thirdBtn'>Art Guides</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='bg-red-200 container w-full flex justify-center items-center mx-auto'>
+      <section className='bg-white container w-full flex justify-center items-center mx-auto'>
         <div className='grid grid-cols-12 gap-11 items-center w-full'>
-
+          
           <div className='col-span-6 flex flex-col justify-center items-start gap-5 w-[70%] ml-11'>
             <h2 className='uppercase text-4xl'>What&apos;s your Art Personality?</h2>
             <p className='text-gray-500 text-sm'>
