@@ -38,7 +38,10 @@ body {
     @apply border-2 uppercase hover:bg-[#0500E8] hover:border-[#0500E8] hover:text-white px-7 py-2 transition-colors ease-in-out duration-150;
   }
   .thirdBtn{
-    @apply border border-gray-100 bg-white hover:bg-[#343434] text-gray-600 hover:text-white px-7 py-2 transition-colors ease-in-out duration-150;
+    @apply border border-gray-100 bg-white hover:bg-[#343434] text-gray-600 hover:text-white px-5 py-2 transition-colors ease-in-out duration-150;
+  }
+  .fifthBtn{
+    @apply border border-gray-100 bg-[var(--mainGray)] hover:bg-[#222222] text-gray-600 hover:text-white px-5 py-2 transition-colors ease-in-out duration-150;
   }
   .fourthBtn{
     @apply border-2 uppercase hover:bg-white hover:text-[#222222] hover:border-white px-7 py-2 transition-colors ease-in-out duration-150;

@@ -18,13 +18,13 @@ export default function Carousel() {
         speed={800} 
     >
       <SwiperSlide>
-        <Slide src="/images/slider1.jpg" title="Welcome to the Art Gallery" btnText="GET STARTED" btnHref="/" />
+        <Slide src="/images/slider1.jpg" title="Welcome to the Art Gallery" p="Discover a curated selection of artworks from emerging and established artists." btnText="GET STARTED" btnHref="/" />
       </SwiperSlide>
       <SwiperSlide>
-        <Slide src="/images/slider2.jpg" title="Collect Art from Artists on the Rise" btnText="GET STARTED" btnHref="/" />
+        <Slide src="/images/slider2.jpg" title="Collect Art from Artists on the Rise" p="Through rough, honest materials, Andrew's simple yet profound paintings echo the raw emotion of early art." btnText="GET STARTED" btnHref="/" />
       </SwiperSlide>
       <SwiperSlide>
-        <Slide src="/images/slider3.jpg" title="Collect Art from Artists on the Rise" btnText="GET STARTED" btnHref="/" />
+        <Slide src="/images/slider3.jpg" title="Work with an Art Advisor" p="Get assistance with art selection, framing, hanging, shipping, and financing" btnText="GET STARTED" btnHref="/" />
       </SwiperSlide>
     </Swiper>
   );
