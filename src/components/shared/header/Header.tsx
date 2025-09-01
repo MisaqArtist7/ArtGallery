@@ -10,7 +10,7 @@ import Basket from '@/components/icons/Basket'
 import './header.css'
 export default function Header() {
   return (
-    <header className='bg-white shadow'>
+    <header className='bg-white shadow sticky z-50 w-full top-0'>
       <div className='header__wrapper px-11 py-4 flex flex-col gap-y-4'>
         <div className='flex items-center justify-between gap-7'>
 
