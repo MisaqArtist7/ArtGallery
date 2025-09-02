@@ -5,7 +5,6 @@ import editorals from '@/data/Editorials'
 import Link from 'next/link'
 import Image from 'next/image'
 export default function HomePage() {
-  const [blogs] = React.useState(editorals)
   return (
     <>
       <section className='heroSection'> 
@@ -54,7 +53,7 @@ export default function HomePage() {
             <h2 className='uppercase text-[var(--title)] text-center pb-5'>Last Editorial</h2>
             <div>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
-              {blogs.map((item, index) => (
+              {editorals.map((item, index) => (
                 <div key={index} className='shadow bg-white flex flex-col justify-between'>
                     <Image src={item.src} alt="Personality" width={369} height={369} />
                     <div className='p-4 flex flex-col justify-between gap-7 h-full'>
@@ -161,6 +160,75 @@ export default function HomePage() {
                 <p>Trusted, 5 Star service from selection to delivery. Questions? Get help from our curators.</p>
               </div>
               <a href="" className='underline'>Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='bg-[var(--mainGray)] container py-11'>
+        <h2 className="uppercase text-[var(--title)] pb-5 text-center">Be in the know</h2>
+        <div>
+          <div className='flex-row-center'>
+            <form action="" className='flex items-center justify-between h-22 gap-x-5 w-[70%]'>
+              <div className='flex-col-center gap-2 h-full'>
+                <input type="email" placeholder='Email Address *' className='py-2 w-full h-full border-b px-4 outline-none bg-white/40 hover:bg-white hover:border-b-[#0500E8] transition-colors duration-150 ease-in-out'/>
+                <p className='text-gray-700 text-xs text-justify'>By giving us your email address you agree to receive (thrilling) email updates, including special offers, new pieces and arty news. If you want you can unsubscribe at any time.</p>
+              </div>
+              <button type="submit" className='btnSecoundary px-16 cursor-pointer'>Join</button>
+            </form>
+          </div>
+
+          <div className='py-4 w-[80%] mx-auto'>
+            <div className='flex justify-between'>
+
+              <div className='flex items-center justify-around h-40 w-[80%]'>
+                <div className="flex flex-col h-full gap-3">
+                  <h3>FOR ARTISTS</h3>
+                  <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+                    <li><Link href="">Submit Your Art</Link></li>
+                    <li><Link href="">Seller Console</Link></li>
+                  </ul>
+                </div>
+
+                <div className='flex flex-col h-full gap-3'>
+                  <h3>FOR COLLECTORS</h3>
+                  <ul className='text-sm text-gray-600 space-y-2 *:hover:underline'>
+                    <li><Link href="">Customer reviews</Link></li>
+                    <li><Link href="">How we curate</Link></li>
+                    <li><Link href="">Returns</Link></li>
+                    <li><Link href="">Framing your artwork</Link></li>
+                    <li><Link href="">Customer&apos;s FAQ</Link></li>
+                  </ul>
+                </div>
+
+                <div className='flex flex-col h-full gap-3'>
+                  <h3>ABOUT US</h3>
+                  <ul className='text-sm text-gray-600 space-y-2 *:hover:underline'>
+                    <li><Link href="">About Us</Link></li>
+                    <li><Link href="">Contact Us</Link></li>
+                    <li><Link href="">Gift Cards</Link></li>
+                    <li><Link href="">Legal</Link></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className='w-[20%] flex flex-col justify-center gap-3'>
+                <h3 className='font-semibold text-center'>CONNECT WITH</h3>
+                <div className='flex items-center'>
+                  <svg>
+                    <use href='#twitter'></use>
+                  </svg> 
+                  <svg>
+                    <use href='#instagram'></use>
+                  </svg> 
+                  <svg>
+                    <use href='#facebook'></use>
+                  </svg> 
+                  <svg>
+                    <use href='#pinterest'></use>
+                  </svg> 
+                </div>
+              </div>
             </div>
           </div>
         </div>
