@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import Carousel from '@/components/shared/Carousel/Carousel'
 import editorals from '@/data/Editorials'
@@ -29,21 +28,136 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className=''>
+      <section className='my-5'>
         <div className='container py-16 w-full flex justify-center items-center mx-auto'>
-          <div>
-            <h2 className='uppercase text-[var(--title)] text-center font-semibold'>Browse by Medium and Style</h2>
-            <p className='text-center text-sm text-gray-700'>Discover New Art from our curated selection of international artists</p>
+          <div className='flex flex-col gap-1'>
             <div>
-
+              <h2 className='uppercase text-[var(--title)] text-center font-semibold'>Browse by Medium and Style</h2>
+              <p className='text-center text-sm text-gray-700'>Discover New Art from our curated selection of international artists</p>
             </div>
             <div className='py-5 flex-row-center gap-3'>
-              <a href="" className='thirdBtn'>Artist Interviews</a>
-              <a href="" className='thirdBtn'>Art News</a>
-              <a href="" className='thirdBtn'>Art Exhibitions</a>
-              <a href="" className='thirdBtn'>Art Movements</a>
-              <a href="" className='thirdBtn'>Art Guides</a>
+              <a href="" className='fifthBtn'>All Art</a>
+              <a href="" className='fifthBtn'>Paintings</a>
+              <a href="" className='fifthBtn'>Abstract Art</a>
+              <a href="" className='fifthBtn'>Oil Paintings</a>
+              <a href="" className='fifthBtn'>New In</a>
+              <a href="" className='fifthBtn'>Landscapes</a>
+              <a href="" className='fifthBtn'>Prints & Editions</a>
+              <a href="" className='fifthBtn'>Pop Art</a>
+              <a href="" className='fifthBtn'>Nudes</a>
+              <a href="" className='fifthBtn'>Sculptures</a>
+              <a href="" className='fifthBtn'>Visual Search</a>
             </div>
+          </div>
+        </div>
+
+        <div className='container'>
+          <div className='flex items-center justify-between'>
+            <h2 className='font-semibold uppercase text-[var(--title)] text-2xl tracking-widest'>New In Paintings</h2>
+            <a href="" className='text-xl underline hover:no-underline'>all paintings</a>
+          </div>
+          <div className='grid grid-cols-5 gap-3 my-5'>
+            <div className="bg-white shadow h-[464px] flex flex-col justify-between">
+              <div className="h-[444px] w-full overflow-hidden">
+                <Image
+                  src="/images/products/1.png"
+                  alt="To Be With You #80"
+                  width={300}
+                  height={300}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3>To Be With You #80</h3>
+                <div className="flex items-center justify-between">
+                  <p>Corinne Natel</p>
+                  <span>€2,475</span>
+                </div>
+                <span>Paintings - 104x104 cm</span>
+              </div>
+            </div>
+
+            <div className="bg-white shadow h-[464px] flex flex-col justify-between">
+              <div className="h-[444px] w-full overflow-hidden">
+                <Image
+                  src="/images/products/2.jpg"
+                  alt="To Be With You #80"
+                  width={300}
+                  height={300}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3>To Be With You #80</h3>
+                <div className="flex items-center justify-between">
+                  <p>Corinne Natel</p>
+                  <span>€2,475</span>
+                </div>
+                <span>Paintings - 104x104 cm</span>
+              </div>
+            </div>
+
+            <div className="bg-white shadow h-[464px] flex flex-col justify-between">
+              <div className="h-[444px] w-full overflow-hidden">
+                <Image
+                  src="/images/products/3.jpg"
+                  alt="To Be With You #80"
+                  width={300}
+                  height={300}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3>To Be With You #80</h3>
+                <div className="flex items-center justify-between">
+                  <p>Corinne Natel</p>
+                  <span>€2,475</span>
+                </div>
+                <span>Paintings - 104x104 cm</span>
+              </div>
+            </div>
+
+            <div className="bg-white shadow h-[464px] flex flex-col justify-between">
+              <div className="h-[444px] w-full overflow-hidden">
+                <Image
+                  src="/images/products/4.jpg"
+                  alt="To Be With You #80"
+                  width={300}
+                  height={300}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3>To Be With You #80</h3>
+                <div className="flex items-center justify-between">
+                  <p>Corinne Natel</p>
+                  <span>€2,475</span>
+                </div>
+                <span>Paintings - 104x104 cm</span>
+              </div>
+            </div>
+
+            <div className="bg-white shadow h-[464px] flex flex-col justify-between">
+              <div className="h-[444px] w-full overflow-hidden">
+                <Image
+                  src="/images/products/5.jpeg"
+                  alt="To Be With You #80"
+                  width={300}
+                  height={300}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3>To Be With You #80</h3>
+                <div className="flex items-center justify-between">
+                  <p>Corinne Natel</p>
+                  <span>€2,475</span>
+                </div>
+                <span>Paintings - 104x104 cm</span>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </section>
