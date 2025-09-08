@@ -16,7 +16,7 @@ export default function Header() {
 
           <div className='flex items-center gap-x-7 w-full'>
             <div>
-              <Image src="./images/logo.svg" alt="Description" width={133} height={133} />
+              <Image src="./images/logo.svg" alt="Description" width={133} height={133} priority/>
             </div>
             <div className='flex-1'>
               <form action="">
