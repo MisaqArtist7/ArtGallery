@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import paintings from '@/data/Painting'
-import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 
 export default function CurrentPainting({ params }: { params: { slug: string } }){
@@ -10,37 +10,101 @@ export default function CurrentPainting({ params }: { params: { slug: string } }
   
   if (!painting) {
     return(
-      <section className='flex-row-center my-24'>
-        <div className='flex-col-center gap-5'>
-          <h1 className='text-5xl font-semibold'>No Painting Found</h1>
-          <Link href='/paintings' className='btnSecoundary flex-row-center gap-2'>
-            <svg className='w-7 h-7'>
-              <use href='#leftArrow'></use>
-            </svg>
-            Go back to Paintings page
-          </Link>
-        </div>
-      </section>
+      notFound()
     )
   }
-
+  
   return (
-    <section className='container my-11'>
-      <div className='grid grid-cols-12 gap-6'>
-        <div className='col-span-4'>
+    <section className='container my-7'>
+      <div className='flex justify-center gap-1'>
+        <div className=''>
           <Image
             src={painting.imageUrl}
             alt={painting.title}
-            width={400}
-            height={400}
-            className="h-full w-full object-cover rounded"
+            width={555}
+            height={555}
+            className="object-cover rounded"
           />
         </div>
-        <div className='col-span-8 flex flex-col gap-4'>
+        <div className='w-1/3 flex flex-col gap-2 p-7'>
           <h1 className='text-2xl font-bold'>{painting.title}</h1>
-          <p className='text-lg'>Artist: {painting.artist}</p>
-          <p className='text-lg'>Dimensions: {painting.dimensions}</p>
-          <p className='text-lg font-semibold'>Price: ${painting.price}</p>
+          <p className='text-lg text-gray-900'>Artist: {painting.artist}</p>
+          <p className='text-lg text-gray-900'>Dimensions: {painting.dimensions}</p>
+          <div className='flex justify-between items-center w-full mt-5'>
+            <p className='text-lg '>Price: €{painting.price}</p>
+            <div className='flex'>
+              <Image
+                src="/images/painting/reviews.png"
+                alt="painting.title"
+                width={101}
+                height={101}
+                className="object-cover rounded"
+              />
+              <Image
+                src="/images/painting/feedback.png"
+                alt="painting.title"
+                width={101}
+                height={101}
+                className="object-cover rounded"
+              />
+            </div>
+          </div>
+
+          <div className='flex flex-col gap-3 my-4'>
+            <button className='flex-row-center w-full btn2'>ADD TO BASKET</button>
+            <div className='flex justify-between items-center gap-1 hover:*:cursor-pointer'>
+              <button className='btnSecoundary w-full'>MAKE AN OFFER</button>
+              <button className='btnSecoundary hover:*:fill-white'>
+                <svg className='w-6 h-6'>
+                  <use href="#favorite" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className='bg-[var(--mainGray)] flex flex-col gap-2 px-3 py-4 shadow'>
+            <div>
+              <div className='flex items-center gap-1'>
+                <span>
+                  <svg className='w-4 h-4'>
+                    <use href="#clock" className='fill-gray-600'/>
+                  </svg>
+                </span>
+                <span>Don’t miss out</span>
+              </div>
+              <p className='pl-5 text-gray-600'>Only 1 left of this edition</p>
+            </div>
+
+            <div className='flex items-center gap-2'>
+              <span>
+                <svg className='w-4 h-4 text-gray-600'>
+                  <use href="#check"/>
+                </svg>
+              </span>
+              <div>
+                <p>Free & easy 14 days returns <a href="#" className='text-sm underline text-gray-600'>Learn more</a></p>
+              </div>  
+            </div>
+            <div className='flex items-center gap-2'>
+              <span>
+                <svg className='w-4 h-4 text-gray-600'>
+                  <use href="#check"/>
+                </svg>
+              </span>
+              <div>
+                <p>Worldwide safe shipping <a href="#" className='text-sm underline text-gray-600'>Learn more</a></p>
+              </div>  
+            </div>
+            <div className='flex items-center gap-2'>
+              <span>
+                <svg className='w-4 h-4 text-gray-600'>
+                  <use href="#check"/>
+                </svg>
+              </span>
+              <div>
+                <p>Trusted by leading brands including <a href="#" className='text-sm underline text-gray-600'>Soho Home</a></p>
+              </div>  
+            </div>
+          </div>
         </div>
       </div>
     </section>

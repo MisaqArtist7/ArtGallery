@@ -156,8 +156,6 @@ export default function HomePage() {
                 <span>Paintings - 104x104 cm</span>
               </div>
             </div>
-
-
           </div>
         </div>
       </section>
