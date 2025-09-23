@@ -1,7 +1,8 @@
+import { Metadata } from "next";
 import Header from "@/components/shared/Header/Header";
 import '../../app/globals.css'
 // Head of website
-export const metadata = {
+export const metadata: Metadata = {
   title: "Art Gallery",
   description: "Home page",
   icons: {

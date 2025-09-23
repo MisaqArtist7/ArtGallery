@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import NavLink from './NavLink'
+import Link from 'next/link'
 import SearchIcon from '@/components/icons/SearchIcon'    
 import LenzIcon from '@/components/icons/LenzIcon'
 import UserIcon from '@/components/icons/UserIcon'
@@ -32,7 +33,7 @@ export default function Header() {
           </div>
 
           <div className='flex items-center gap-x-4'>
-            <span><UserIcon /></span>
+            <Link href="./register"><UserIcon /></Link>
             <span><WishListIcon /></span>
             <span><GiftCart /></span>
             <span><Basket /></span>

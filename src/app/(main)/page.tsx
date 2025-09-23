@@ -31,10 +31,14 @@ export default function HomePage() {
       <section className='my-5'>
         <div className='container py-16 w-full flex justify-center items-center mx-auto'>
           <div className='flex flex-col gap-1'>
+            <p className='uppercase text-[var(--title)] text-center font-semibold '>Browse by Medium and Style</p>
+            <p className='uppercase text-[var(--title)] text-center font-semibold '>Browse by Medium and Style</p>
+              
             <div>
               <h2 className='uppercase text-[var(--title)] text-center font-semibold'>Browse by Medium and Style</h2>
               <p className='text-center text-sm text-gray-700'>Discover New Art from our curated selection of international artists</p>
             </div>
+
             <div className='py-5 flex-row-center gap-3'>
               <a href="" className='fifthBtn'>All Art</a>
               <a href="" className='fifthBtn'>Paintings</a>
