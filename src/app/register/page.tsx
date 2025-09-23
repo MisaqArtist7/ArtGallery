@@ -10,15 +10,15 @@ export default function RegisterPage() {
                 <div className='flex justify-between items-center'>   
                     <h1 className='font-semibold text-xl'>Sign up</h1>
                     <span className='hover:cursor-pointer'>
-                        <svg className='w-6 h-6 text-gray-600'>
+                        <svg className='w-6 h-6 hover:text-[var(--primaryBlue)]'>
                             <use href="#backspace" />
                         </svg>
                     </span>
                 </div>
 
-                <Link href="#" className='flex justify-center items-center gap-2 border-2 border-gray-300 px-7 py-2 rounded-md'>
+                <Link href="#" className='flex justify-center items-center gap-2 border-2 border-gray-300 hover:border-[var(--primaryBlue)]/40 px-7 py-2 rounded-md'>
                     <Image src="/images/google.svg" alt="Description" width={17} height={17} />
-                    Log in with Google
+                    Sign up with Google
                 </Link>
 
                 <span className='border-1 border-gray-200 mb-3 my-2 w-[calc(95%-1rem)] mx-auto'></span>
@@ -41,7 +41,7 @@ export default function RegisterPage() {
 
                     <div className='flex items-center gap-1 my-3'>
                         <input type="checkbox" id="terms" />
-                        <label className='text-gray-600'>I agree with <span>Terms</span> and <span>Privacy</span></label>
+                        <label className='text-gray-600'>I agree with <span className='text-[var(--primaryBlue)]'>Terms</span> and <span className='text-[var(--primaryBlue)]'>Privacy</span></label>
                     </div>
 
                     <button className='authBtn'>Sign up</button>
@@ -51,7 +51,7 @@ export default function RegisterPage() {
 
                 <div className='flex-col-center text-gray-700'>
                     <span className='text-md'>Already have an account?</span>
-                    <Link href="/login  " className='text-[var(--primaryBlue)]'>Log in</Link>
+                    <Link href="/login  " className='text-[var(--primaryBlue)] hover:underline'>Log in</Link>
                 </div>
             </div>
         </section>
