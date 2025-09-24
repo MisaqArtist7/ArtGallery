@@ -1,7 +1,44 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+const schema = z.object({
+    email: z.email("Invalid email address"),
+    password: z.string().min(8, "Password must be at least 8 characters").max(32, "Must be a maximum of 32 characters"),
+})
+type formData = z.infer<typeof schema>
 
 export default function LoginPage() {
+    const [permission, setPermission] = useState(true)
+    const { register, handleSubmit, formState: { errors } } = useForm<formData>({
+        resolver: zodResolver(schema)
+    })
+
+    const onSubmit = async (data: formData) => {
+        console.log(data)
+        try {
+            const response = await fetch('/api/register', {
+                method: 'POST',
+                body: JSON.stringify(data) ,
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+            if(!response.ok) {
+                const errorText = await response.text()
+                throw new Error(errorText || "Something went wrong")
+            }
+            const result = await response.json()
+            localStorage.setItem('token', result.token)
+            console.log(result)
+        } catch(error) {
+            console.log("Fetching went wrong: ", error)
+        }
+    }
   return (
         <main className='bg-[#F7F7F7]'>
         <section className='flex-row-center min-h-screen'>
@@ -22,24 +59,28 @@ export default function LoginPage() {
 
                 <span className='border-1 border-gray-200 mb-3 my-2 w-[calc(95%-1rem)] mx-auto'></span>
 
-                <form action="" className='flex flex-col gap-3'>
+                <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-3'>
 
                     <div className='flex flex-col gap-2'>
                         <label htmlFor="">Email</label>
-                        <input type="text" className='flex justify-center items-center gap-2 border-2 border-gray-300 focus:outline-[var(--primaryBlue)] px-3 py-2 rounded-md' placeholder='example@email.com'/>
+                        <input {...register("email")}
+                         type="text" className='flex justify-center items-center gap-2 border-2 border-gray-300 focus:outline-[var(--primaryBlue)] px-3 py-2 rounded-md' placeholder='example@email.com'/>
+                         {errors.email && <span className='text-red-500'>{errors.email.message}</span>}
                     </div>
 
                     <div className='flex flex-col gap-2'>
                         <label htmlFor="">Password</label>
-                        <input type="text" className='flex justify-center items-center gap-2 border-2 border-gray-300 focus:outline-[var(--primaryBlue)] px-3 py-2 rounded-md' placeholder='at least 8 characters'/>
+                        <input {...register("password")}
+                        type="text" className='flex justify-center items-center gap-2 border-2 border-gray-300 focus:outline-[var(--primaryBlue)] px-3 py-2 rounded-md' placeholder='at least 8 characters'/>
+                        {errors.password && <span className='text-red-500'>{errors.password.message}</span>}
                     </div>
 
                     <div className='flex items-center gap-1 my-3'>
-                        <input type="checkbox" id="terms" />
+                        <input type="checkbox" id="terms" onClick={() => setPermission(false)} />
                         <label className='text-gray-600'> Remember me</label>
                     </div>
 
-                    <button className='authBtn'>Sign up</button>
+                    <button disabled={permission} className={`${permission ? 'cursor-not-allowed opacity-50 bg-[var(--primaryBlue)]' : ''} authBtn`}>Sign in</button>
                 </form>
 
                 <span className='border-1 border-gray-200 mb-3 my-2 w-[calc(95%-1rem)] mx-auto'></span>

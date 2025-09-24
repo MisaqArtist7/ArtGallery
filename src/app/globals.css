@@ -53,7 +53,6 @@ body {
   .authBtn{
     @apply bg-[#0500E8]/80 hover:bg-[#0500E8] rounded-md text-white py-2 transition-colors ease-in-out duration-150 cursor-pointer;
   }
-
   .swiper-pagination-bullet:hover{
     @apply !bg-white !opacity-100;
   }
