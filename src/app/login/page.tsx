@@ -76,7 +76,7 @@ export default function LoginPage() {
                     </div>
 
                     <div className='flex items-center gap-1 my-3'>
-                        <input type="checkbox" id="terms" onClick={() => setPermission(false)} />
+                        <input type="checkbox" id="terms" onClick={() => setPermission(!permission)} />
                         <label className='text-gray-600'> Remember me</label>
                     </div>
 

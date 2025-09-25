@@ -3,6 +3,7 @@ import Carousel from '@/components/shared/Carousel/Carousel'
 import editorals from '@/data/Editorials'
 import Link from 'next/link'
 import Image from 'next/image'
+
 export default function HomePage() {
   return (
     <>
@@ -30,10 +31,7 @@ export default function HomePage() {
 
       <section className='my-5'>
         <div className='container py-16 w-full flex justify-center items-center mx-auto'>
-          <div className='flex flex-col gap-1'>
-            <p className='uppercase text-[var(--title)] text-center font-semibold '>Browse by Medium and Style</p>
-            <p className='uppercase text-[var(--title)] text-center font-semibold '>Browse by Medium and Style</p>
-              
+          <div className='flex flex-col gap-1'>              
             <div>
               <h2 className='uppercase text-[var(--title)] text-center font-semibold'>Browse by Medium and Style</h2>
               <p className='text-center text-sm text-gray-700'>Discover New Art from our curated selection of international artists</p>
@@ -58,7 +56,7 @@ export default function HomePage() {
         <div className='container'>
           <div className='flex items-center justify-between'>
             <h2 className='font-semibold uppercase text-[var(--title)] text-2xl tracking-widest'>New In Paintings</h2>
-            <a href="" className='text-xl underline hover:no-underline'>all paintings</a>
+            <Link href="/paintings" className='text-xl underline hover:no-underline'>all paintings</Link>
           </div>
           <div className='grid grid-cols-5 gap-3 my-5'>
             <div className="bg-white shadow h-[464px] flex flex-col justify-between">

@@ -84,7 +84,7 @@ export default function RegisterPage() {
                     </div>
 
                     <div className='flex items-center gap-1 my-3'>
-                        <input onClick={() => setPermission(false)}
+                        <input onClick={() => setPermission(!permission)}
                         type="checkbox" id="terms" />
                         <label className='text-gray-600'>I agree with <span className='text-[var(--primaryBlue)]'>Terms</span> and <span className='text-[var(--primaryBlue)]'>Privacy</span></label>
                     </div>
