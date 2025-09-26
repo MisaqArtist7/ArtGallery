@@ -9,7 +9,7 @@ export default function PaintingPage() {
     <section className='bg-[var(--mainGray)]'>
       <div className='flex flex-col items-center gap-2 container py-11'>
         <h1 className='text-2xl font-semibold uppercase text-[var(--title)] flex-row-center'>Paintings For Sale</h1>
-        <p className='text-gray-600'>Browse our curated selection of paintings for sale, featuring contemporary artists from around the world. Whether you&apos;re searching for a bold statement piece or a delicate, intimate composition, our collection spans oil paintings, watercolours, acrylic works, and mixed media creations. With a wide range of styles, from expressive abstracts to intricate figurative works, you&apos;ll find contemporary art paintings that speak to your taste and transform your space.</p>
+        <p className='text-gray-600 text-justify hyphens-auto'>Browse our curated selection of paintings for sale, featuring contemporary artists from around the world. Whether you&apos;re searching for a bold statement piece or a delicate, intimate composition, our collection spans oil paintings, watercolours, acrylic works, and mixed media creations. With a wide range of styles, from expressive abstracts to intricate figurative works, you&apos;ll find contemporary art paintings that speak to your taste and transform your space.</p>
       </div>
     </section>
 
@@ -29,7 +29,7 @@ export default function PaintingPage() {
           </div>
         </div>
 
-          <div className='grid grid-cols-4 my-5 gap-5'>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-5 gap-5'>
             {paintingsData.map((paint, index) => (
             <Link key={index} href={`/paintings/${paint.slug}`}>
               <div className="bg-white shadow h-[404px] flex flex-col justify-between">

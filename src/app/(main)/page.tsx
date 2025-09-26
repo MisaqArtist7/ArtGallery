@@ -249,8 +249,8 @@ export default function HomePage() {
             <p><a href="" className='underline'>Discover contemporary art for sale</a> online and explore our curated selections.</p>
           </div>
 
-          <div className='flex items-center justify-between flex-wrap gap-11 w-full py-11'>
-            <div className='flex-col-center gap-3 w-full'>
+          <div className='flex flex-col lg:flex-row justify-center items-center w gap-11 w-full py-11'>
+            <div className='flex-col-center gap-3'>
               <svg className='w-16 h-16'>
                 <use href='#tick'></use>
               </svg>
@@ -260,7 +260,7 @@ export default function HomePage() {
               </div>
               <a href="" className='underline'>Learn More</a>
             </div>
-            <div className='flex-col-center gap-3 w-full'>
+            <div className='flex-col-center gap-3'>
               <svg className='w-16 h-16'>
                 <use href='#pointer'></use>
               </svg>
@@ -270,7 +270,7 @@ export default function HomePage() {
               </div>
               <a href="" className='underline'>Learn More</a>
             </div>
-            <div className='flex-col-center gap-3 w-full'>
+            <div className='flex-col-center gap-3'>
               <svg className='w-16 h-16'>
                 <use href='#lock'></use>
               </svg>

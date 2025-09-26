@@ -15,37 +15,39 @@ export default function CurrentPainting({ params }: { params: { slug: string } }
   }
   
   return (
-    <section className='container my-7'>
-      <div className='flex justify-center gap-1'>
-        <div className=''>
+    <section className='container my-7 w-full'>
+      <div className='flex flex-col lg:flex-row w-full justify-center gap-5 lg:gap-1'>
+
+        <div className='w-full lg:w-1/2 xl:w-1/3'>
           <Image
             src={painting.imageUrl}
             alt={painting.title}
             width={555}
             height={555}
-            className="object-cover rounded"
+            className="w-full h-full object-cover rounded"
           />
         </div>
-        <div className='w-1/3 flex flex-col gap-2 p-7'>
+
+        <div className=' flex flex-col justify-between gap-2 lg:px-7 lg:py-1'>
           <h1 className='text-2xl font-bold'>{painting.title}</h1>
           <p className='text-lg text-gray-900'>Artist: {painting.artist}</p>
           <p className='text-lg text-gray-900'>Dimensions: {painting.dimensions}</p>
           <div className='flex justify-between items-center w-full mt-5'>
             <p className='text-lg '>Price: €{painting.price}</p>
-            <div className='flex'>
+            <div className='flex-row-center'>
               <Image
                 src="/images/painting/reviews.png"
                 alt="painting.title"
                 width={101}
                 height={101}
-                className="object-cover rounded"
+                className="w-full h-full object-cover rounded"
               />
               <Image
                 src="/images/painting/feedback.png"
                 alt="painting.title"
                 width={101}
                 height={101}
-                className="object-cover rounded"
+                className="w-full h-full object-cover rounded"
               />
             </div>
           </div>
