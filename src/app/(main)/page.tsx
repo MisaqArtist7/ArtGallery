@@ -4,7 +4,11 @@ import editorals from '@/data/Editorials'
 import Link from 'next/link'
 import Image from 'next/image'
 
+// ISR / SSG 
+export const revalidate = 60
+
 export default function HomePage() {
+  const editorialsData = editorals
   return (
     <>
       <section className='heroSection'> 
@@ -12,14 +16,14 @@ export default function HomePage() {
       </section>
 
       <section className='bg-[var(--mainGray)] w-full flex justify-center items-center mx-auto py-7'>
-        <div className='grid grid-cols-12 gap-11 container items-center w-full'>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-11 container items-center w-full">
 
-          <div className='col-span-6 flex flex-col justify-center items-start gap-5 w-[70%] ml-11'>
-            <h2 className='uppercase text-4xl'>THE SOUND OF FORM: REPRISE</h2>
-            <p className='text-sm'>
+          <div className="col-span-6 flex flex-col justify-center items-start gap-5 lg:w-[70%] lg:ml-11">
+            <h2 className="uppercase text-4xl text-center lg:text-left">THE SOUND OF FORM: REPRISE</h2>
+            <p className="text-sm text-center md:text-left">
               Featuring works by Kevin Jackson and Andrew Crane, Reprise explores the boundless ways in which form, rhythm, silence, and resonance coexist on canvas.
             </p>
-            <Link href="" className='btnSecoundary'>view exhibition</Link>
+            <Link href="" className="btnSecoundary self-center lg:self-start">view exhibition</Link>
           </div>
 
           <div className="col-span-6 relative w-full h-[400px]">
@@ -37,7 +41,7 @@ export default function HomePage() {
               <p className='text-center text-sm text-gray-700'>Discover New Art from our curated selection of international artists</p>
             </div>
 
-            <div className='py-5 flex-row-center gap-3'>
+            <div className='py-5 flex-row-center flex-wrap gap-3'>
               <a href="" className='fifthBtn'>All Art</a>
               <a href="" className='fifthBtn'>Paintings</a>
               <a href="" className='fifthBtn'>Abstract Art</a>
@@ -58,7 +62,7 @@ export default function HomePage() {
             <h2 className='font-semibold uppercase text-[var(--title)] text-2xl tracking-widest'>New In Paintings</h2>
             <Link href="/paintings" className='text-xl underline hover:no-underline'>all paintings</Link>
           </div>
-          <div className='grid grid-cols-5 gap-3 my-5'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 my-5'>
             <div className="bg-white shadow h-[464px] flex flex-col justify-between">
               <div className="h-[444px] w-full overflow-hidden">
                 <Image
@@ -162,18 +166,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='bg-white container w-full flex justify-center items-center mx-auto'>
-        <div className='grid grid-cols-12 gap-11 items-center w-full'>
+      <section className='bg-white my-11 container w-full flex justify-center items-center mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-11 items-center w-full'>
 
-          <div className='col-span-6 flex flex-col justify-center items-start gap-5 w-[70%] ml-11'>
-            <h2 className='uppercase text-4xl'>Soho Home x Rise Art</h2>
-            <p className='text-gray-500 text-sm'>
+          <div className='col-span-6 flex flex-col justify-center items-start gap-5 lg:w-[70%] lg:ml-11'>
+            <h2 className='uppercase text-4xl self-center lg:self-start'>Soho Home x Rise Art</h2>
+            <p className='text-gray-500 text-sm text-center lg:text-left'>
               Fine art meets contemporary interiors. We&apos;re pleased to collaborate with Soho Home to provide original artwork from emerging and celebrated artists for their UK and US studios.
             </p>
-            <Link href="" className='btnSecoundary'>Find out more</Link>
-            <div>
-              <span className='uppercase text-gray-600'>Featured Collections</span>
-              <div className='flex items-center flex-wrap gap-3 pt-4'>
+            <Link href="" className='btnSecoundary self-center lg:self-start'>Find out more</Link>
+            <div className='w-full'>
+              <span className='uppercase text-gray-600 flex items-center justify-center lg:justify-start'>Featured Collections</span>
+              <div className='flex items-center justify-center lg:justify-start flex-wrap gap-3 pt-4'>
                 <a href="" className='fifthBtn'>Curators Picks</a>
                 <a href="" className='fifthBtn'>Statement Pieces</a>
                 <a href="" className='fifthBtn'>Wall Gallery</a>
@@ -191,14 +195,14 @@ export default function HomePage() {
       </section>
 
       <section className='bg-[var(--mainGray)]'>
-        <div className='container py-16 w-full flex justify-center items-center mx-auto'>
+        <div className='container py-16 w-full mx-auto'>
           <div>
             <h2 className='uppercase text-[var(--title)] text-center pb-5'>Last Editorial</h2>
             <div>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
-              {editorals.map((item, index) => (
+              {editorialsData.map((item, index) => (
                 <div key={index} className='shadow bg-white flex flex-col justify-between'>
-                    <Image src={item.src} alt="Personality" width={369} height={369} />
+                    <Image src={item.src} alt="Personality" width={369} height={369} className='w-full h-full object-cover' />
                     <div className='p-4 flex flex-col justify-between gap-7 h-full'>
 
                       <div className='flex flex-col justify-center gap-1'>
@@ -224,7 +228,7 @@ export default function HomePage() {
                 <a href="" className='uppercase btnSecoundary'>Show All</a>
               </div>
             </div>
-            <div className='py-5 flex-row-center gap-3'>
+            <div className='py-5 flex-row-center flex-wrap gap-3'>
               <a href="" className='thirdBtn'>Artist Interviews</a>
               <a href="" className='thirdBtn'>Art News</a>
               <a href="" className='thirdBtn'>Art Exhibitions</a>
@@ -237,7 +241,7 @@ export default function HomePage() {
 
       <section className='bg-[#222222] py-11'>
         <div className='flex-row-center text-white flex-col-center container w-[90%]'> 
-          <h2 className='uppercase py-5'>We bridge the digital and physical realms of art acquisition</h2>
+          <h2 className='uppercase py-5 text-center lg:text-left'>We bridge the digital and physical realms of art acquisition</h2>
 
           <div className='flex flex-col justify-center text-justify gap-3 text-gray-300'>
             <p>A distinguished platform among online art galleries, Rise Art offers a thoughtful approach to discovering and collecting fine art. Our bespoke curatorial services, tailored consultations, and seamless logistical processes mean you can purchase fine art online—whether original or limited-edition—with ease.</p>
@@ -245,8 +249,8 @@ export default function HomePage() {
             <p><a href="" className='underline'>Discover contemporary art for sale</a> online and explore our curated selections.</p>
           </div>
 
-          <div className='flex items-center justify-between gap-11 w-full py-11'>
-            <div className='flex-col-center gap-3'>
+          <div className='flex items-center justify-between flex-wrap gap-11 w-full py-11'>
+            <div className='flex-col-center gap-3 w-full'>
               <svg className='w-16 h-16'>
                 <use href='#tick'></use>
               </svg>
@@ -256,7 +260,7 @@ export default function HomePage() {
               </div>
               <a href="" className='underline'>Learn More</a>
             </div>
-            <div className='flex-col-center gap-3'>
+            <div className='flex-col-center gap-3 w-full'>
               <svg className='w-16 h-16'>
                 <use href='#pointer'></use>
               </svg>
@@ -266,7 +270,7 @@ export default function HomePage() {
               </div>
               <a href="" className='underline'>Learn More</a>
             </div>
-            <div className='flex-col-center gap-3'>
+            <div className='flex-col-center gap-3 w-full'>
               <svg className='w-16 h-16'>
                 <use href='#lock'></use>
               </svg>
@@ -284,7 +288,7 @@ export default function HomePage() {
         <h2 className="uppercase text-[var(--title)] pb-5 text-center">Be in the know</h2>
         <div>
           <div className='flex-row-center'>
-            <form action="" className='flex items-center justify-between h-22 gap-x-5 w-[70%]'>
+            <form action="" className='flex flex-col lg:flex-row lg:jb gap-5 px-7 lg:w-[70%]'>
               <div className='flex-col-center gap-2 h-full'>
                 <input type="email" placeholder='Email Address *' className='py-2 w-full h-full border-b px-4 outline-none bg-white/40 hover:bg-white hover:border-b-[#0500E8] transition-colors duration-150 ease-in-out'/>
                 <p className='text-gray-700 text-xs text-justify'>By giving us your email address you agree to receive (thrilling) email updates, including special offers, new pieces and arty news. If you want you can unsubscribe at any time.</p>
@@ -293,59 +297,55 @@ export default function HomePage() {
             </form>
           </div>
 
-          <div className='py-4 w-[80%] mx-auto'>
-            <div className='flex justify-between'>
+        <div className="py-4 px-7 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            {/* Artists */}
+            <div className="flex flex-col gap-3">
+              <h3 className="font-semibold">FOR ARTISTS</h3>
+              <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+                <li><Link href="">Submit Your Art</Link></li>
+                <li><Link href="">Seller Console</Link></li>
+              </ul>
+            </div>
 
-              <div className='flex items-center justify-around h-40 w-[80%]'>
-                <div className="flex flex-col h-full gap-3">
-                  <h3>FOR ARTISTS</h3>
-                  <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
-                    <li><Link href="">Submit Your Art</Link></li>
-                    <li><Link href="">Seller Console</Link></li>
-                  </ul>
-                </div>
+            {/* Collectors */}
+            <div className="flex flex-col gap-3">
+              <h3 className="font-semibold">FOR COLLECTORS</h3>
+              <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+                <li><Link href="">Customer reviews</Link></li>
+                <li><Link href="">How we curate</Link></li>
+                <li><Link href="">Returns</Link></li>
+                <li><Link href="">Framing your artwork</Link></li>
+                <li><Link href="">Customer&apos;s FAQ</Link></li>
+              </ul>
+            </div>
 
-                <div className='flex flex-col h-full gap-3'>
-                  <h3>FOR COLLECTORS</h3>
-                  <ul className='text-sm text-gray-600 space-y-2 *:hover:underline'>
-                    <li><Link href="">Customer reviews</Link></li>
-                    <li><Link href="">How we curate</Link></li>
-                    <li><Link href="">Returns</Link></li>
-                    <li><Link href="">Framing your artwork</Link></li>
-                    <li><Link href="">Customer&apos;s FAQ</Link></li>
-                  </ul>
-                </div>
+            {/* About */}
+            <div className="flex flex-col gap-3">
+              <h3 className="font-semibold">ABOUT US</h3>
+              <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+                <li><Link href="">About Us</Link></li>
+                <li><Link href="">Contact Us</Link></li>
+                <li><Link href="">Gift Cards</Link></li>
+                <li><Link href="">Legal</Link></li>
+              </ul>
+            </div>
 
-                <div className='flex flex-col h-full gap-3'>
-                  <h3>ABOUT US</h3>
-                  <ul className='text-sm text-gray-600 space-y-2 *:hover:underline'>
-                    <li><Link href="">About Us</Link></li>
-                    <li><Link href="">Contact Us</Link></li>
-                    <li><Link href="">Gift Cards</Link></li>
-                    <li><Link href="">Legal</Link></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className='w-[20%] flex flex-col justify-center gap-3'>
-                <h3 className='font-semibold text-center'>CONNECT WITH</h3>
-                <div className='flex items-center'>
-                  <svg>
-                    <use href='#twitter'></use>
-                  </svg> 
-                  <svg>
-                    <use href='#instagram'></use>
-                  </svg> 
-                  <svg>
-                    <use href='#facebook'></use>
-                  </svg> 
-                  <svg>
-                    <use href='#pinterest'></use>
-                  </svg> 
-                </div>
+            {/* Social */}
+            <div className="flex flex-col items-center md:items-start gap-3">
+              <h3 className="font-semibold text-center md:text-left">CONNECT WITH</h3>
+              <div className="flex flex-wrap gap-3 *:hover:cursor-pointer">
+                <svg className="w-8 h-8"><use href="#twitter" /></svg>
+                <svg className="w-8 h-8"><use href="#instagram" /></svg>
+                <svg className="w-8 h-8"><use href="#facebook" /></svg>
+                <svg className="w-8 h-8"><use href="#pinterest" /></svg>
               </div>
             </div>
+
           </div>
+        </div>
+
         </div>
       </section>
     </>

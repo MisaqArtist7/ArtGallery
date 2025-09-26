@@ -12,10 +12,10 @@ import './header.css'
 export default function Header() {
   return (
     <header className='bg-white shadow sticky z-50 w-full top-0'>
-      <div className='header__wrapper px-11 py-4 flex flex-col gap-y-4'>
+      <div className='header__wrapper px-3 md:px-11 py-4 flex flex-col gap-y-4'>
         <div className='flex items-center justify-between gap-7'>
 
-          <div className='flex items-center gap-x-7 w-full'>
+          <div className='flex items-center gap-x-4 md:gap-x-7 w-full'>
             <div>
               <Image src="/images/logo.svg" alt="Description" width={133} height={133} priority/>
             </div>
@@ -32,7 +32,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className='flex items-center gap-x-4'>
+          <div className='hidden md:flex items-center gap-x-4'>
             <Link href="./register"><UserIcon /></Link>
             <span><WishListIcon /></span>
             <span><GiftCart /></span>
@@ -47,7 +47,7 @@ export default function Header() {
           
         </div>
 
-        <div className='border-t border-t-gray-200'>
+        <div className='border-t border-t-gray-200 hidden md:block'>
           <nav className='flex-row-center pt-3'>
             <ul className='flex items-center gap-x-5 text-gray-700'>
               <li>
@@ -73,9 +73,6 @@ export default function Header() {
               </li>
               <li>
                 <NavLink href="/exhibitions">Exhibitions</NavLink>
-              </li>
-              <li>
-                <NavLink href="/art-advisory">Art Advisory</NavLink>
               </li>
             </ul>
           </nav>

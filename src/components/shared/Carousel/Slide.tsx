@@ -16,7 +16,7 @@ export default function Slide({ src, title, btnText, btnHref, p }: SlideProps) {
       <Image src={src} alt={title} fill className="object-cover blur-[0.7px]" />
       <div className="flex-col-center z-10 gap-4">
         <h1 className="text-white text-6xl font-semibold flex-row-center text-center">{title}</h1>
-        <p className="text-white text-lg">{p}</p>
+        <p className="text-white text-center">{p}</p>
         {btnText && btnHref && <Link href={btnHref} className="btn">{btnText}</Link>}
       </div>
     </div>
