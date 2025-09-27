@@ -25,6 +25,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <symbol id="favorite" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 30.618l-0.991-1.067c-0.444-0.48-0.889-0.947-1.333-1.409s-0.827-0.889-1.231-1.298l-0.231-0.244c-5.809-6.12-10.4-10.951-10.4-16.187 0-5.587 4.062-8.511 8.076-8.511 2.711 0 4.889 2.142 6.111 3.747 1.24-1.596 3.404-3.733 6.12-3.733 5.244 0 8.071 4.378 8.071 8.498 0 5.218-4.662 10.133-10.56 16.356l-0.076 0.084-1.302 1.369-1.271 1.333zM9.889 4.124c-2.818 0-5.853 1.969-5.853 6.289s4.32 8.889 9.778 14.667l0.249 0.253c0.404 0.444 0.813 0.858 1.222 1.293l0.716 0.738 0.636-0.671 1.382-1.444c5.538-5.876 9.951-10.507 9.951-14.836 0-4.12-2.942-6.276-5.849-6.276-1.996 0-4 2.089-5.169 4.040l-0.951 1.56-0.951-1.56c-1.187-1.956-3.169-4.053-5.16-4.053z"></path></symbol>
         <symbol id="check" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><g><polygon points="25.7,64.1 0.2,37.4 8.9,29.1 25.8,46.8 62.9,8.8 71.5,17.1 	"></polygon></g></symbol>
         <symbol id="backspace" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6"> <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" /> </symbol>
+        <symbol id="burgerMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+        </symbol>
+        <symbol id="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </symbol>
+        <symbol id="chevronDown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
       </svg>
         {children}
       </body>

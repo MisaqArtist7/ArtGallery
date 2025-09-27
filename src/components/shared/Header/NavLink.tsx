@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
+
 type NavLinksProps = {
   href: string;
   children: React.ReactNode;
