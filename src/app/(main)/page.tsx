@@ -297,13 +297,13 @@ export default function HomePage() {
             </form>
           </div>
 
-        <div className="py-4 px-7 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="p-7 mx-auto">
+          <div className="flex flex-col gap-5 sm:flex-row justify-around">
             
             {/* Artists */}
             <div className="flex flex-col gap-3">
-              <h3 className="font-semibold">FOR ARTISTS</h3>
-              <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+              <h3 className="font-semibold text-lg">FOR ARTISTS</h3>
+              <ul className="text-md text-gray-600 space-y-2 *:hover:underline">
                 <li><Link href="">Submit Your Art</Link></li>
                 <li><Link href="">Seller Console</Link></li>
               </ul>
@@ -311,8 +311,8 @@ export default function HomePage() {
 
             {/* Collectors */}
             <div className="flex flex-col gap-3">
-              <h3 className="font-semibold">FOR COLLECTORS</h3>
-              <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+              <h3 className="font-semibold text-lg">FOR COLLECTORS</h3>
+              <ul className="text-md text-gray-600 space-y-2 *:hover:underline">
                 <li><Link href="">Customer reviews</Link></li>
                 <li><Link href="">How we curate</Link></li>
                 <li><Link href="">Returns</Link></li>
@@ -323,8 +323,8 @@ export default function HomePage() {
 
             {/* About */}
             <div className="flex flex-col gap-3">
-              <h3 className="font-semibold">ABOUT US</h3>
-              <ul className="text-sm text-gray-600 space-y-2 *:hover:underline">
+              <h3 className="font-semibold text-lg">ABOUT US</h3>
+              <ul className="text-md text-gray-600 space-y-2 *:hover:underline">
                 <li><Link href="">About Us</Link></li>
                 <li><Link href="">Contact Us</Link></li>
                 <li><Link href="">Gift Cards</Link></li>
