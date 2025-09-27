@@ -74,7 +74,7 @@ export default function Header() {
           </div> 
           {/* mobile links */}
           <div>
-            <ul className='flex flex-col p-1'>
+            <ul className='flex flex-col p-1 uppercase'>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
                 <Link href="#" className='text-gray-800'>Home</Link>
                 <span>
@@ -115,7 +115,7 @@ export default function Header() {
                   </svg>
                 </span>
               </li>
-              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
+              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
                 <Link href="#" className='text-gray-800'>Exhibition</Link>
                 <span>
                   <svg className='w-6 h-6 cursor-pointer'>
@@ -123,6 +123,48 @@ export default function Header() {
                   </svg>
                 </span>
               </li>
+              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                  <svg className='w-5 h-5'>
+                    <use href='#favorite'></use>
+                  </svg>
+                  Wishlist
+                </Link>
+                <span>
+                  <svg className='w-6 h-6 cursor-pointer'>
+                    <use href='#chevronDown'></use>
+                  </svg>
+                </span>
+              </li>
+              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                  <UserIcon />
+                  My profile
+                </Link>
+                <span>
+                  <svg className='w-6 h-6 cursor-pointer'>
+                    <use href='#chevronDown'></use>
+                  </svg>
+                </span>
+              </li>
+              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                  <Basket />
+                  Basket
+                </Link>
+              </li>
+              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                  <GiftCart />
+                  Gift cart
+                </Link>
+              </li>
+              <div className='flex items-center gap-2 py-3'>
+                <div className='w-5 h-5 rounded-full overflow-hidden'>
+                  <Image src="/images/German.png" alt="Description" width={20} height={20} className='object-cover w-full h-full' />
+                </div>
+                <span>€ (EUR)</span>
+            </div>
             </ul>
           </div>
           <div>
