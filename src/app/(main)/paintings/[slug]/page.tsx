@@ -1,12 +1,14 @@
-/* eslint-disable */
 import Image from 'next/image'
 import paintings from '@/data/Painting'
 import { notFound } from 'next/navigation'
 
+interface BlogPageProps {
+  params: Promise<{ slug: string }>
+}
 
-export default function CurrentPainting({ params }: any){
+export default async function CurrentPainting({ params }: BlogPageProps){
   console.log(params)
-  const { slug } = params
+  const { slug } = await params
   const painting = paintings.find(item => item.slug.toLowerCase() === slug.toLowerCase())
   
   if (!painting) notFound()
