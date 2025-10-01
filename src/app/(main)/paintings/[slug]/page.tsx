@@ -1,11 +1,10 @@
-'use client'
-import * as React from 'react'
+/* eslint-disable */
 import Image from 'next/image'
 import paintings from '@/data/Painting'
 import { notFound } from 'next/navigation'
 
 
-export default function CurrentPainting({ params }: { params: { slug: string } }){
+export default function CurrentPainting({ params }: any){
   console.log(params)
   const { slug } = params
   const painting = paintings.find(item => item.slug.toLowerCase() === slug.toLowerCase())
