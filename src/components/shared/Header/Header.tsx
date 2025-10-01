@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import NavLink from './NavLink'
 import Link from 'next/link'
@@ -11,8 +11,26 @@ import GiftCart from '@/components/icons/GiftCart'
 import Basket from '@/components/icons/Basket'
 import './header.css'
 
+
 export default function Header() {
-  const [burgerMenu, setBurgerMenu] = useState(false)
+  const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth >= 768) {
+        setBurgerMenu(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener("resize", handleResize);
+  })
+
+  const toggleMenu = (index: number) => {
+    // setOpenIndex(index) // just open
+    setOpenIndex(prev => prev === index ? null : index) 
+  }
   return (
     <header className='bg-white shadow sticky z-50 w-full top-0'>
       <div className='header__wrapper px-3 md:px-11 py-4 flex flex-col gap-y-4'>
@@ -74,9 +92,75 @@ export default function Header() {
           </div> 
           {/* mobile links */}
           <div>
-            <ul className='flex flex-col p-1 uppercase'>
+            <ul className='flex flex-col p-1'>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
-                <Link href="#" className='text-gray-800'>Home</Link>
+                <Link href="#" className='text-gray-800 uppercase'>Home</Link>
+                <span>
+                  <svg className='w-6 h-6 cursor-pointer'>
+                    <use href='#chevronDown'></use>
+                  </svg>
+                </span>
+              </li>
+              <li className='border-b border-gray-200 py-3'>
+                <div onClick={() => toggleMenu(0)}
+                className='flex items-center justify-between *:hover:text-[var(--primaryBlue)] cursor-pointer'>
+                  <Link href="#" className='text-gray-800 uppercase'>Paintings</Link>
+                  <span>
+                    <svg className='w-6 h-6 cursor-pointer'>
+                      <use href='#chevronDown'></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div className={`overflow-hidden transition-all duration-75 ease-in-out px-1 
+                   ${openIndex === 0 ? "max-h-96 opacity-100 translate-y-0 pt-3" : "max-h-0 opacity-0 -translate-y-1"} `}>
+                  <ul className='flex flex-col gap-3 text-gray-700'>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Abstract paintings</Link>
+                    </li>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Figurative paintings</Link>
+                    </li>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Oil paintings</Link>
+                    </li>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Landscape paintings</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='border-b border-gray-200 py-3'>
+                <div onClick={() => toggleMenu(1)}
+                className='flex items-center justify-between *:hover:text-[var(--primaryBlue)] cursor-pointer'>
+                  <Link href="#" className='text-gray-800 uppercase'>Prints</Link>
+                  <span>
+                    <svg className='w-6 h-6 cursor-pointer'>
+                      <use href='#chevronDown'></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div className={`overflow-hidden transition-all duration-75 ease-in-out px-1 
+                   ${openIndex === 1 ? "max-h-96 opacity-100 translate-y-0 pt-3" : "max-h-0 opacity-0 -translate-y-1"} `}>
+                  <ul className='flex flex-col gap-3 text-gray-700'>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Abstract paintings</Link>
+                    </li>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Animal prints</Link>
+                    </li>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Limo prints</Link>
+                    </li>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="">Landscape prints</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
+                <Link href="#" className='text-gray-800 uppercase'>Photography</Link>
                 <span>
                   <svg className='w-6 h-6 cursor-pointer'>
                     <use href='#chevronDown'></use>
@@ -84,31 +168,7 @@ export default function Header() {
                 </span>
               </li>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
-                <Link href="#" className='text-gray-800'>Paintings</Link>
-                <span>
-                  <svg className='w-6 h-6 cursor-pointer'>
-                    <use href='#chevronDown'></use>
-                  </svg>
-                </span>
-              </li>
-              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
-                <Link href="#" className='text-gray-800'>Prints</Link>
-                <span>
-                  <svg className='w-6 h-6 cursor-pointer'>
-                    <use href='#chevronDown'></use>
-                  </svg>
-                </span>
-              </li>
-              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
-                <Link href="#" className='text-gray-800'>Photography</Link>
-                <span>
-                  <svg className='w-6 h-6 cursor-pointer'>
-                    <use href='#chevronDown'></use>
-                  </svg>
-                </span>
-              </li>
-              <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
-                <Link href="#" className='text-gray-800'>Sculpture</Link>
+                <Link href="#" className='text-gray-800 uppercase'>Sculpture</Link>
                 <span>
                   <svg className='w-6 h-6 cursor-pointer'>
                     <use href='#chevronDown'></use>
@@ -116,7 +176,7 @@ export default function Header() {
                 </span>
               </li>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
-                <Link href="#" className='text-gray-800'>Exhibition</Link>
+                <Link href="#" className='text-gray-800 uppercase'>Exhibition</Link>
                 <span>
                   <svg className='w-6 h-6 cursor-pointer'>
                     <use href='#chevronDown'></use>
@@ -124,7 +184,7 @@ export default function Header() {
                 </span>
               </li>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
-                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2 uppercase'>
                   <svg className='w-5 h-5'>
                     <use href='#favorite'></use>
                   </svg>
@@ -137,7 +197,7 @@ export default function Header() {
                 </span>
               </li>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
-                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2 uppercase'>
                   <UserIcon />
                   My profile
                 </Link>
@@ -148,13 +208,13 @@ export default function Header() {
                 </span>
               </li>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
-                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2 uppercase'>
                   <Basket />
                   Basket
                 </Link>
               </li>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)] ` capitalizexxxx'>
-                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2'>
+                <Link href="#" className='text-gray-800 flex items-center justify-center gap-2 uppercase'>
                   <GiftCart />
                   Gift cart
                 </Link>

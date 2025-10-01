@@ -82,11 +82,11 @@ const paintings = [
   },
   {
     id: 10,
-    title: "Sans titre [250430]",
-    slug: "sans-titre-250430",
-    artist: "Laurent Marty",
-    price: 800,
-    dimensions: "55x46 cm",
+    title: "Sans morian",
+    slug: "Sans-morian",
+    artist: "Denis",
+    price: 978,
+    dimensions: "77x46 cm",
     imageUrl: "/images/painting/10.jpg"
   },
   {
