@@ -1,16 +1,16 @@
-import React from 'react'
+'use client'
+import * as React from 'react'
 import Image from 'next/image'
 import paintings from '@/data/Painting'
 import { notFound } from 'next/navigation'
 
 
 export default function CurrentPainting({ params }: { params: { slug: string } }){
+  console.log(params)
   const { slug } = params
-  const painting = paintings.find((item) => item.slug.toLowerCase() === slug.toLowerCase())
+  const painting = paintings.find(item => item.slug.toLowerCase() === slug.toLowerCase())
   
-  if (!painting) {
-    notFound()
-  }
+  if (!painting) notFound()
   
   return (
     <section className='container my-7 w-full'>
