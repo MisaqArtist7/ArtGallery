@@ -6,12 +6,10 @@ import { notFound } from 'next/navigation'
 
 export default function CurrentPainting({ params }: { params: { slug: string } }){
   const { slug } = params
-  const painting = paintings.find(item => item.slug.toLowerCase() === slug.toLowerCase())
+  const painting = paintings.find((item) => item.slug.toLowerCase() === slug.toLowerCase())
   
   if (!painting) {
-    return(
-      notFound()
-    )
+    notFound()
   }
   
   return (
