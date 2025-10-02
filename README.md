@@ -33,9 +33,8 @@ ArtGallery is a fully responsive website for showcasing and selling paintings an
 
 ![UI Image](public/images/screenshots/8.png)
 
-![UI Image](public/images/screenshots/9.png)
+![UI Image](public/images/screenshots/9.png) ![UI Image](public/images/screenshots/10.png)
 
-![UI Image](public/images/screenshots/10.png)
 
 -------------------------------------
 🚀 How to install and run
