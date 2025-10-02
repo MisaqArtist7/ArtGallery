@@ -25,7 +25,7 @@ export default function Header() {
     window.addEventListener('resize', handleResize)
 
     return () => window.removeEventListener("resize", handleResize);
-  })
+  }, []);
 
   const toggleMenu = (index: number) => {
     // setOpenIndex(index) // just open
