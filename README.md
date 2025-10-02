@@ -34,8 +34,8 @@ ArtGallery is a fully responsive website for showcasing and selling paintings an
 ![UI Image](public/images/screenshots/8.png)
 
 <div style="display: flex; gap: 10px;">
-  <img src="public/images/screenshots/9.png" width="50%" />
-  <img src="public/images/screenshots/10.png" width="50%" />
+  <img src="public/images/screenshots/9.png" width="300" />
+  <img src="public/images/screenshots/10.png" width="300" />
 </div>
 
 -------------------------------------
@@ -47,5 +47,6 @@ ArtGallery is a fully responsive website for showcasing and selling paintings an
 - Open http://localhost:3000 in your browser.
 
 - Preview: https://art-gallery-e4wq.vercel.app/
+
 
 
