@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function RegisterLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <main>
       <body>{children}</body>
-    </html>
+    </main>
   );
 }

@@ -3,7 +3,7 @@ import paintings from '@/data/Painting'
 import { notFound } from 'next/navigation'
 
 interface BlogPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>  // when resolved you will get slug 
 }
 
 export default async function CurrentPainting({ params }: BlogPageProps){

@@ -94,7 +94,7 @@ export default function Header() {
           <div>
             <ul className='flex flex-col p-1'>
               <li className='flex items-center justify-between border-b border-gray-200 py-3 *:hover:text-[var(--primaryBlue)]'>
-                <Link href="#" className='text-gray-800 uppercase'>Home</Link>
+                <Link href="/" className='text-gray-800 uppercase'>Home</Link>
                 <span>
                   <svg className='w-6 h-6 cursor-pointer'>
                     <use href='#chevronDown'></use>
@@ -104,7 +104,7 @@ export default function Header() {
               <li className='border-b border-gray-200 py-3'>
                 <div onClick={() => toggleMenu(0)}
                 className='flex items-center justify-between *:hover:text-[var(--primaryBlue)] cursor-pointer'>
-                  <Link href="#" className='text-gray-800 uppercase'>Paintings</Link>
+                  <span className='text-gray-800 uppercase'>Paintings</span>
                   <span>
                     <svg className='w-6 h-6 cursor-pointer'>
                       <use href='#chevronDown'></use>
@@ -115,6 +115,9 @@ export default function Header() {
                 <div className={`overflow-hidden transition-all duration-75 ease-in-out px-1 
                    ${openIndex === 0 ? "max-h-96 opacity-100 translate-y-0 pt-3" : "max-h-0 opacity-0 -translate-y-1"} `}>
                   <ul className='flex flex-col gap-3 text-gray-700'>
+                    <li className='*:hover:text-[var(--primaryBlue)]'>
+                      <Link href="/paintings">All paintings</Link>
+                    </li>
                     <li className='*:hover:text-[var(--primaryBlue)]'>
                       <Link href="">Abstract paintings</Link>
                     </li>
