@@ -1,4 +1,4 @@
-📑 ArtGallery
+🌄 ArtGallery
 
 ArtGallery is a fully responsive website for showcasing and selling paintings and art pieces. Each artwork has its own dynamic page, allowing users to view detailed information and images when clicking on a specific piece.
 
@@ -47,6 +47,7 @@ ArtGallery is a fully responsive website for showcasing and selling paintings an
 - Open http://localhost:3000 in your browser.
 
 - Preview: https://art-gallery-e4wq.vercel.app/
+
 
 
 
