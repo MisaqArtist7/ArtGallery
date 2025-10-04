@@ -1,4 +1,4 @@
-📑 ArtGallery
+🌄 ArtGallery
 
 ArtGallery is a fully responsive website for showcasing and selling paintings and art pieces. Each artwork has its own dynamic page, allowing users to view detailed information and images when clicking on a specific piece.
 
@@ -37,6 +37,12 @@ ArtGallery is a fully responsive website for showcasing and selling paintings an
 
 ![UI Image](public/images/screenshots/10.png)
 
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="public/images/screenshots/9.png" width="420" />
+  <img src="public/images/screenshots/10.png" width="420" />
+</div>
+
+
 -------------------------------------
 🚀 How to install and run
 - git clone https://github.com/MisaqArtist7/ArtGallery.git
@@ -46,5 +52,23 @@ ArtGallery is a fully responsive website for showcasing and selling paintings an
 - Open http://localhost:3000 in your browser.
 
 - Preview: https://art-gallery-e4wq.vercel.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
